@@ -1,0 +1,14 @@
+body {
+    font-family: 'Indie Flower', cursive;
+}
+
+section {
+    text-align: center;
+}
+
+.container {
+    height: 600px;
+    width: 500px;
+    border: solid 1px black;
+    margin: 50px auto;
+}
