@@ -11,4 +11,5 @@ section {
     width: 500px;
     border: solid 1px black;
     margin: 50px auto;
+    background-color: rgba(0, 0, 0, 0.5);
 }
