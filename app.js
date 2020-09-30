@@ -15,14 +15,14 @@ getCode()
 
 
 //create an array of 100 objects(questions)
-const question= [
+const questions = [
     {
         question: "What year was BTS found?",
         a: "2018",
         b: "2013",
         c: "2016",
         d: "2017",
-        answer: b
+        answer: "b"
     },
     {
         question: "What year did BTS first get top Social Artist Award at the Billboard Music Awards?",
@@ -30,7 +30,7 @@ const question= [
         b: "2020",
         c: "2018",
         d: "2016",
-        answer: c
+        answer: "c"
     },
     {
         question: "Which group is not a group that was founded in 2018-2020?",
@@ -38,7 +38,7 @@ const question= [
         b: "Everglow",
         c: "SF9",
         d: "Itzy",
-        answer: c
+        answer: "c"
     },
     {
         question: "What entertainment company is BlackPink under?",
@@ -46,7 +46,7 @@ const question= [
         b: "BigHit Labels",
         c: "JYP Entertainment",
         d: "YG Entertainment",
-        answer: d
+        answer: "d"
     },
     {
         question: "What group is not currently active under SM Entertainment?",
@@ -54,7 +54,7 @@ const question= [
         b: "NCT",
         c: "SHINee",
         d: "f(x)",
-        answer: d
+        answer: "d"
     },
     {
         question: "Which group won Road to Kingdom?", 
@@ -62,7 +62,7 @@ const question= [
         b: "The Boyz",
         c: "Oneus",
         d: "Golden Child",
-        answer: b
+        answer: "b"
     },
     {
         question: "What is the newly formed group from BigHit Labels and Mnet called?",
@@ -70,7 +70,7 @@ const question= [
         b: "I-Landers",
         c: "Enhyphen",
         d: "I-Land",
-        answer: a
+        answer: "a"
     },
     {
         question: "What group is not under FNC Entertainment?",
@@ -78,7 +78,7 @@ const question= [
         b: "SF9", 
         c: "N.Flying",
         d: "A-Pink",
-        answer: d
+        answer: "d"
     },
     {
         question: "Who is the K-Pop star involved with K/DA and True Damage from League of Legends?", 
@@ -86,7 +86,7 @@ const question= [
         b: "Soyeon",
         c: "Bobby", 
         d: "BI",
-        answer: b
+        answer: "b"
     },
     {
         question: "Who did BlackPink not collaborate with already?", 
@@ -94,7 +94,7 @@ const question= [
         b: "Dua Lipa",
         c: "Ariana Grande",
         d: "Lady Gaga",
-        answer: c
+        answer: "c"
     },
     {
         question: "Which group was the first K-Pop act at Coachella and what year did they perform?",
@@ -102,7 +102,7 @@ const question= [
         b: "Epik High 2017", 
         c: "BigBang 2018",
         d: "Eric Nam 2019",
-        answer: b
+        answer: "b"
     },
     {
         question: "Which K-Pop group used sign language in their choreography?", 
@@ -110,7 +110,7 @@ const question= [
         b: "Oneus", 
         c: "BtoB", 
         d: "Teen Top",
-        answer: c
+        answer: "c"
     },
     {
         question: "Who learned English by watching FRIENDS?", 
@@ -118,7 +118,7 @@ const question= [
         b: "BangChan", 
         c: "Jennie", 
         d: "Eric",
-        answer: a
+        answer: "a"
     },
     {
         question: "When did KCON first start occurring?", 
@@ -126,7 +126,7 @@ const question= [
         b: "2013", 
         c: "2012", 
         d: "2019",
-        answer: c
+        answer: "c"
     },
     {
         question: "When did KCON-NY first start occurring?", 
@@ -134,7 +134,7 @@ const question= [
         b: "2018", 
         c: "2016", 
         d: "2015",
-        answer: d
+        answer: "d"
     },
     {
         question: "Who founded BigHit Entertainment/BigHit Labels?", 
@@ -142,7 +142,7 @@ const question= [
         b: "JY Park", 
         c: "Lee Soo Man", 
         d: "Bang Si Hyuk",
-        answer: d
+        answer: "d"
     },
     {
         question: "How many song festivals are there at the end of the calendar year in South Korea?", 
@@ -150,7 +150,7 @@ const question= [
         b: "3", 
         c: "5",
         d: "4",
-        answer: b
+        answer: "b"
     },
     {
         question: "Who did BTS perform with at the 2020 Grammys?", 
@@ -158,7 +158,7 @@ const question= [
         b: "Jonas Brothers", 
         c: "The Weeknd", 
         d: "Justin Bieber",
-        answer: a 
+        answer: "a" 
     },
     {
         question: "What year did Super Junior debut?", 
@@ -166,7 +166,7 @@ const question= [
         b: "2006", 
         c: "2005", 
         d: "2009",
-        answer: c
+        answer: "c"
     },
     {
         question: "What song is Super Junior known for?", 
@@ -174,7 +174,7 @@ const question= [
         b: "Bonanama", 
         c: "Black Suit", 
         d: "Sorry Sorry",
-        answer: d
+        answer: "d"
     },
     {
         question: "How many members are in BlackPink?", 
@@ -182,7 +182,7 @@ const question= [
         b: "5", 
         c: "4", 
         d: "6",
-        answer: c
+        answer: "c"
     },
     {
         question: "How many members are in Seventeen?", 
@@ -190,7 +190,7 @@ const question= [
         b: "13", 
         c: "14", 
         d: "12",
-        answer: b
+        answer: "b"
     },
     {
         question: "Which female K-pop singer has the title of Nation’s Little Sister?", 
@@ -198,7 +198,7 @@ const question= [
         b: "Yoona", 
         c: "Suzy", 
         d: "Yoo In Na",
-        answer: a
+        answer: "a"
     },
     {
         question: "Which male K-Pop singer has the title of Nation’s Little Brother?", 
@@ -206,7 +206,7 @@ const question= [
         b: "Lee Seung-gi", 
         c: "Rain",
         d: "Cha Eun-woo from ASTRO",
-        answer: b
+        answer: "b"
     },
     {
         question: "What song let BTS get their first win on a music show?", 
@@ -214,7 +214,7 @@ const question= [
         b: "Butterfly", 
         c: "You Never Walk Alone", 
         d: "DNA",
-        answer: a
+        answer: "a"
     },
     {
         question: "How did SF9 get to debut?",
@@ -222,7 +222,7 @@ const question= [
         b: "Survival show",
         c: "Reality TV",
         d: "Busking",
-        answer: b
+        answer: "b"
     },
     {
         question: "How did BTS announce their Jason Derulo Savage Love Remix?", 
@@ -230,7 +230,7 @@ const question= [
         b: "Facebook", 
         c: "Twitter", 
         d: "TikTok",
-        answer: d
+        answer: "d"
     },
     {
         question: "Where do most English-speaking K-Pop artists hail from?", 
@@ -238,7 +238,7 @@ const question= [
         b: "Los Angeles", 
         c: "Toronto", 
         d: "Vancouver",
-        answer: b
+        answer: "b"
     },
     {
         question: "How many members are in Red Velvet?", 
@@ -246,7 +246,7 @@ const question= [
         b: "5", 
         c: "4", 
         d: "6",
-        answer: b
+        answer: "b"
     },
     {
         question: "What year did SHINee debut?", 
@@ -254,7 +254,7 @@ const question= [
         b: "2007", 
         c: "2008", 
         d: "2010",
-        answer: c
+        answer: "c"
     },
     {
         question: "What is Onew from SHINee’s favorite food?", 
@@ -262,7 +262,7 @@ const question= [
         b: "Chicken", 
         c: "Pork Belly", 
         d: "Japchae",
-        answer: b
+        answer: "b"
     },
     {
         question: "Which 2PM song gained popularity 5 years after it was released?", 
@@ -270,7 +270,7 @@ const question= [
         b: "Our House", 
         c: "Hands Up", 
         d: "ADTOY",
-        answer: b
+        answer: "b"
     },
     {
         question: "What song did ATEEZ debut with?", 
@@ -278,7 +278,7 @@ const question= [
         b: "HALA HALA", 
         c: "Say My Name", 
         d: "Answer",
-        answer: a
+        answer: "a"
     },
     {
         question: "What song did Everglow debut with?", 
@@ -286,7 +286,7 @@ const question= [
         b: "Bon Bon Chocolat", 
         c: "La Di Da", 
         d: "Adios",
-        answer: b
+        answer: "b"
     },
     {
         question: "What song did BTS debut with?", 
@@ -294,7 +294,7 @@ const question= [
         b: "We are Bulletproof pt 2", 
         c: "Boy in Luv", 
         d: "No More Dream",
-        answer: d
+        answer: "d"
     },
     {
         question: "What company is NU’EST under?", 
@@ -302,7 +302,7 @@ const question= [
         b: "Big Hit Labels", 
         c: "SM Entertainment", 
         d: "Jellyfish Entertainment",
-        answer: a
+        answer: "a"
     },
     {
         question: "Who is the leader of G-IDLE?", 
@@ -310,7 +310,7 @@ const question= [
         b: "Miyeon", 
         c: "Yuqi", 
         d: "Minnie",
-        answer: a
+        answer: "a"
     },
     {
         question: "Which group developed renewed popularity after 4 members went onto Produce 101 Season 2?", 
@@ -318,7 +318,7 @@ const question= [
         b: "AB6IX", 
         c: "CIX", 
         d: "JBJ",
-        answer: a
+        answer: "a"
     },
     {
         question: "Who was the youngest female solo singer to debut?", 
@@ -326,7 +326,7 @@ const question= [
         b: "BoA", 
         c: "Minzy", 
         d: "Suzy",
-        answer: b
+        answer: "b"
     },
     {
         question: "Who is not part of the Big Tittie Commitee?", 
@@ -334,9 +334,10 @@ const question= [
         b: "Baekho from NU’EST", 
         c: "Mingyu from Seventeen", 
         d: "Taecyeon from 2PM",
-        answer: d
+        answer: "d"
     }
 ]
+console.log(questions[39].answer)
 
 //function to restart game
 const restartGame = () => {

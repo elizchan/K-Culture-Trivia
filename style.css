@@ -14,3 +14,11 @@ section {
     margin: 50px auto;
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+.game-title {
+    font-size: 48px;
+}
+
+.code {
+    font-size: 30px;
+}
