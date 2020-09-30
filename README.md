@@ -1,7 +1,7 @@
 # K-Culture-Trivia
 Intro to Trivia Setup
 -There are 2 players and 100 questions about Korean culture
--In order to play against each other in real time there is a random code generator
+-In order to play against each other in real time there is a random code generator which players have to enter in input field
 -Each question lasts 20 seconds
 -The score would be tallied at the end, whoever answers the most questions correctly wins the game
 
