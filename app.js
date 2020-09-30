@@ -14,7 +14,7 @@ getCode()
 //function to start game
 
 
-//create an array of 100 objects(questions)
+//create an array of 100 objects(questions) with answer choices
 const questions = [
     {
         question: "What year was BTS found?",
@@ -655,12 +655,172 @@ const questions = [
         c: "Pocky/Pepero",
         d: "honey pastry",
         answer: "c"
-    }       
+    },
+    {
+        question: "Where is a place that couples tend to go to attach a lock?",
+        a: "Namsan Tower", 
+        b: "Han River",
+        c: "Gyeongbokgung Palace",
+        d: "Gyeonghuigung",
+        answer: "a"
+    },
+    {
+        question: "What is the name of the river that runs through Seoul?",
+        a: "Bukhan River",
+        b: "Han River", 
+        c: "Yeongsan River",
+        d: "Geumho River",
+        answer: "b"
+    },
+    {
+        question: "Where was the 2018 Winter Olympics held?", 
+        a: "Seoul",
+        b: "Busan",
+        c: "Jeju",
+        d: "Pyeongchang",
+        answer: "d"
+    },
+    {
+        question: "Where do teens usually hang out within Seoul?",
+        a: "Myeongdong", 
+        b: "Hongdae",
+        c: "Itaewon",
+        d: "Cheongdam",
+        answer: "a"
+    },
+    {
+        question: "Where are most entertainment agencies located?",
+        a: "Yeongsam",
+        b: "Cheongdam", 
+        c: "Seocho",
+        d: "Hongdae",
+        answer: "b"
+    },
+    {
+        question: "Where did League of Legends Worlds 2018 take place?",
+        a: "Incheon", 
+        b: "Busan",
+        c: "Seoul",
+        d: "Gwanju",
+        answer: "a"
+    },
+    {
+        question: "Which Jungkook and Jimin from BTS hail from?", 
+        a: "Ilsan",
+        b: "Daegu",
+        c: "Busan", 
+        d: "Seoul",
+        answer: "c"
+    },
+    {
+        question: "Korean skincare and makeup company, Innisfree, uses natural resources from where in South Korea?",
+        a: "Busan",
+        b: "Jeju Island", 
+        c: "Danyang",
+        d: "DMZ",
+        answer: "b"
+    },
+    {
+        question: "What is Jeju Island not known for?",
+        a: "oranges",
+        b: "female divers",
+        c: "dormant volcano",
+        d: "city life",
+        answer: "d"
+    },
+    {
+        question: "What is not a well known amusement park in South Korea?",
+        a: "Lotte World",
+        b: "Everland", 
+        c: "Caribbean Bay",
+        d: "Disney",
+        answer: "d"
+    },
+    {
+        question: "Which city was used to create Milan in Record of Youth?", 
+        a: "Busan",
+        b: "Petite France",
+        c: "Paju Camp", 
+        d: "Seoul",
+        answer: "c"
+    },
+    {
+        question: "Which amusement park in South Korea is French-themed?",
+        a: "Lotte World",
+        b: "Everland",
+        c: "Caribbean Bay",
+        d: "Petite France",
+        answer: "d"
+    },
+    {
+        question: "Where did the Democratic Uprising take place in 1980?",
+        a: "Ilsan",
+        b: "Gwangju",
+        c: "Gyeongsang",
+        d: "Daegu",
+        answer: "b"
+    },
+    {
+        question: "Which palace is listed on the UNESCO World Heritage Site?",
+        a: "Deoksugung",
+        b: "Gyeongbokgung",
+        c: "Changdeokgung",
+        d: "Changgyeonggung",
+        answer: "c"
+    },
+    {
+        question: "Which palace is the most frequented?",
+        a: "Deoksugung",
+        b: "Gyeongbokgung",
+        c: "Changdeokgung",
+        d: "Changgyeonggung",
+        answer: "b"
+    },
+    {
+        question: "Which palace did BTS perform at 5 years apart?",
+        a: "Deoksugung",
+        b: "Gyeongbokgung",
+        c: "Changdeokgung",
+        d: "Changgyeonggung",
+        answer: "b"
+    },
+    {
+        question: "What amusement park did 2PM and SNSD film a commercial together for?",
+        a: "Lotte World",
+        b: "Everland",
+        c: "Caribbean Bay",
+        d: "Petite France",
+        answer: "c"
+    },
+    {
+        question: "Where in South Korea did Black Panther shoot in?",
+        a: "Busan",
+        b: "Seoul",
+        c: "Daegu",
+        d: "Jeju",
+        answer: "a"
+    },
+    {
+        question: "What is DMZ not well-known for?",
+        a: "unique wildlife",
+        b: "marks the armistice of the Korean War",
+        c: "there is a city within the DMZ",
+        d: "marks the separation between North and South Korea",
+        answer: "c"
+    },
+    {
+        question: "What do people like to do by the Han River?",
+        a: "ride bicycle/take a walk",
+        b: "swimming",
+        c: "picnic",
+        d: "drinking alcohol",
+        answer: "b"
+    }
+           
 ]
 //console.log(questions[39].answer)
 
 //function to restart game
-
 const restartGame = () => {
     let position = 0
     let playerOne = []

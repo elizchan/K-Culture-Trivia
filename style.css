@@ -9,10 +9,10 @@ section {
 
 .container {
     height: 600px;
-    width: 500px;
+    width: 700px;
     border: solid 1px black;
     margin: 50px auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .game-title {
