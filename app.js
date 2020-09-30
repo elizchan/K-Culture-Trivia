@@ -495,8 +495,167 @@ const questions = [
         c: "Doctors", 
         d: "Hyena",
         answer: "a"
-    }
-    
+    },
+    {
+        question: "What is not a typical street food in South Korea?",
+        a: "Spicy rice cakes(tteokbokki)", 
+        b:"kimbap", 
+        c: "Korean sweet pancakes(hotteok)", 
+        d: "japchae",
+        answer: "d"
+    },
+    {
+        question: "What food became more popular because of Parasite?",
+        a: "Instant ramen",
+        b: "Chapaguri",
+        c: "Instant Jjajjangmyeon",
+        d: "Chapaghetti",
+        answer: "b"
+    },
+    {
+        question: "What does a Korean movie theater have that is not offered in the US?", 
+        a: "Pretzels",
+        b: "Hot Dog",
+        c: "Caramel Popcorn",
+        d: "Nachos",
+        answer: "c"
+    },
+    {
+        question: "What is not an ingredient for Korean corndog?",
+        a: "Kimchi",
+        b: "string cheese",
+        c:  "sausage",
+        d: "sugar",
+        answer: "a"
+    },
+    {
+        question: "What do Koreans use with their sashimi?",
+        a: "Wasabi",
+        b: "chili paste",
+        c: "chili paste with vinegar",
+        d: "soybean paste",
+        answer: "c"
+    },
+    {
+        question: "What do Koreans typically eat on the hottest days of the year?",
+        a: "Tteokbokki",
+        b: "Ramen",
+        c: "Mul Naengmyun",
+        d: "Samgyetang",
+        answer: "d"
+    },
+    {
+        question: "What do Koreans typically use when eating rice?",
+        a: "Chopsticks",
+        b: "Spoon",
+        c: "Fork",
+        d: "Hand",
+        answer: "b"
+    },
+    {
+        question: "What do Koreans love to eat with their beer?",
+        a: "Dried Pollack",
+        b: "Fried Chicken",
+        c: "Pizza",
+        d: "Hamburger",
+        answer: "b"
+    },
+    {
+        question: "What is a type of Korean chilled noodles dish?", 
+        a: "Japchae",
+        b: "Naengmyun", 
+        c: "Kalguksu",
+        d: "Jjambbong",
+        answer: "b"
+    },
+    {
+        question: "What is dried seaweed called in Korean?",
+        a: "Bap",
+        b: "Kim", 
+        c: "Bbang",
+        d: "Miyeok",
+        answer: "b"
+    },
+    {
+        question: "What food is traditionally eaten during the new year that signifies getting older?",
+        a: "Seaweed Soup",
+        b: "Rice Cake Soup", 
+        c: "Soondubu Jjigae",
+        d: "Kimchi Jjigae",
+        answer: "b"
+    },
+    {
+        question: "What food is traditionally eaten on one’s birthday for the upcoming year?",
+        a: "Seaweed Soup", 
+        b: "Rice Cake Soup",
+        c: "Soondubu Jjigae",
+        d: "Kimchi Jjigae",
+        answer: "a"
+    },
+    {
+        question: "Which of the following drinks is not made with rice?",
+        a: "Soju",
+        b: "Sikhye",
+        c: "Bokbunja", 
+        d: "Maekju",
+        answer: "c"
+    },
+    {
+        question: "How is steamed egg served?", 
+        a: "in a normal bowl with rice",
+        b: "in a pyrex dish",
+        c: "in a pot",
+        d: "in an earthenware bowl",
+        answer: "d"
+    },
+    {
+        question: "When is barley tea served in Korea?",
+        a: "summer",
+        b: "winter",
+        c: "all year long",
+        d: "none at all",
+        answer: "c"
+    },
+    {
+        question: "What is the most consumed type of meat in Korea?",
+        a: "beef",
+        b: "pork",
+        c: "chicken",
+        d: "lamb",
+        answer: "b"
+    },
+    {
+        question: "What do Koreans not eat on exam day?",
+        a: "glutinous rice cake",
+        b: "hard taffy",
+        c: "seaweed soup",
+        d: "chocolate",
+        answer: "c"
+    },
+    {
+        question: "What food is not commonly prepared for Chuseok?",
+        a: "songpyeon",
+        b: "pajeon",
+        c: "japchae",
+        d: "mooncake",
+        answer: "d"
+    },
+    {
+        question: "What utensil is the choice of Koreans?",
+        a: "metal chopsticks",
+        b: "bamboo chopsticks",
+        c: "wooden chopsticks",
+        d: "plastic chopsticks",
+        answer: "a"
+    },
+    {
+        question: "What do people usually eat on 11/11?",
+        a: "Honey Butter Potato Chips",
+        b: "Shrimp flavored chips",
+        c: "Pocky/Pepero",
+        d: "honey pastry",
+        answer: "c"
+    }       
 ]
 //console.log(questions[39].answer)
 
