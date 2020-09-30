@@ -335,11 +335,173 @@ const questions = [
         c: "Mingyu from Seventeen", 
         d: "Taecyeon from 2PM",
         answer: "d"
+    },
+    {
+        question: "What movie won the Oscars in 2020?", 
+        a: "Time to Hunt",
+        b: "Parasite", 
+        c: "Train to Busan", 
+        d: "Svaha the 6th finger",
+        answer: "b"
+    },
+    {
+        question: "Who is the movie director for Parasite?", 
+        a: "Bong Joon-ho", 
+        b: "Park Chan-wook", 
+        c: "Lee Chang-dong", 
+        d: "Hong Sangsoo",
+        answer: "a"
+    },
+    {
+        question: "Who is not in the Wooga Squad?", 
+        a: "Park Hyungsik", 
+        b: "Park Seojoon", 
+        c: "Choi Woosik", 
+        d: "Choi Minho",
+        answer: "d"
+    },
+    {
+        question: "What drama did really well in 2016?",
+        a: "Crash Landing on You", 
+        b: "Itaewon Class",
+        c: "Goblin", 
+        d: "Hwarang",
+        answer: "c"
+    },
+    {
+        question: "How long is a typical episode in a Korean drama?", 
+        a: "30min", 
+        b: "45min", 
+        c: "63min", 
+        d: "75min",
+        answer: "c"
+    },
+    {
+        question: "What was the top K-drama at the start of 2020?", 
+        a: "Itaewon Class", 
+        b: "Crash Landing on You", 
+        c: "Hospital Playlist", 
+        d: "Hyena",
+        answer: "b"
+    },
+    {
+        question: "What is the first well-known Korean zombie movie?", 
+        a: "Peninsula", 
+        b: "Train to Busan", 
+        c: "#Alive", 
+        d: "Kingdom",
+        answer: "b"
+    },
+    {
+        question: "What drama did Park So-Dam not star in?", 
+        a: "Record of Youth", 
+        b: "Cinderella and the Four Knights", 
+        c: "Romantic Dr. Kim", 
+        d: "A Beautiful Mind",
+        answer: "c"
+    },
+    {
+        question: "What drama did Park Bo-gum star in that led to his popularity?", 
+        a: "Love in the Moonlight", 
+        b: "Reply 1988", 
+        c: "Naeil’s Cantabile", 
+        d: "Record of Youth",
+        answer: "b"
+    },
+    {
+        question: "What drama is not considered a classic?", 
+        a: "Secret Garden", 
+        b: "Dream High", 
+        c: "Boys Over Flowers", 
+        d: "Gu Family Book",
+        answer: "d"
+    },
+    {
+        question: "What TV network/Studio has a partnership with Netflix?", 
+        a: "MBC", 
+        b: "TvN", 
+        c: "KBS", 
+        d: "SBS",
+        answer: "b"
+    },
+    {
+        question: "Who is not a well known child actor/actress?", 
+        a: "Kim Yoo-Jung", 
+        b: "Kim Sae-Ron", 
+        c: "Yeo Jin-Goo", 
+        d: "Kim Soo-Hyun",
+        answer: "d"
+    },
+    {
+        question: "What used to be the episode length of a Korean weekend drama?", 
+        a: "16", 	
+        b: "50", 
+        c: "100", 
+        d: "60",
+        answer: "b"
+    },
+    {
+        question: "How many episodes are in a weekday Korean drama?", 
+        a: "8", 
+        b: "12", 
+        c: "16", 
+        d: "18",
+        answer: "c"
+    },
+    {
+        question: "Which is not a drama that Cha Eun-Woo from ASTRO starred in?", 
+        a: "Rookie Historian Goo Hae-ryung", 
+        b: "Gangnam Beauty", 
+        c: "Hit the Top", 
+        d: "Romance is a Bonus Book",
+        answer: "d"
+    },
+    {
+        question: "Which drama was Lee Jong-Suk’s breakout drama?", 
+        a: "W", 
+        b: "I Can Hear Your Voice", 
+        c: "School 2013", 
+        d: "Pinocchio",
+        answer: "c"
+    },
+    {
+        question: "Which Korean actor played a role in the GI Joe films?", 
+        a: "Lee Byung-Hun", 
+        b: "Ma Dong-Seok", 
+        c: "Lee Joon-Gi", 
+        d: "Bae Doo-Na",
+        answer: "a"
+    },
+    {
+        question: "What foreign country did Descendants of the Sun filming take place in?", 
+        a: "South Africa", 
+        b: "Greece", 
+        c: "Australia", 
+        d: "New Zealand",
+        answer: "b"
+    },
+    {
+        question: "What drama was Kim Soo-Hyun’s breakout drama?", 
+        a: "My Love from the Stars",
+        b: "It’s Okay to Not be Okay", 
+        c: "Dream High", 
+        d: "Moon Embracing the Sun",
+        answer: "c"
+    },
+    {
+        question: "Which drama is a thriller?", 
+        a: "Save Me", 
+        b: "Let’s Fight Ghost", 
+        c: "Doctors", 
+        d: "Hyena",
+        answer: "a"
     }
+    
 ]
-console.log(questions[39].answer)
+//console.log(questions[39].answer)
 
 //function to restart game
+
 const restartGame = () => {
     let position = 0
     let playerOne = []
