@@ -7,16 +7,23 @@ section {
     text-align: center;
 }
 
-.container {
+.game-container {
     height: 600px;
     width: 700px;
     border: solid 1px black;
     margin: 50px auto;
     background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: flex-end;
 }
 
 .game-title {
     font-size: 48px;
+}
+.timer {
+    height: 70px;
+    width: 70px;
+    border: solid 1px black;
 }
 
 .code {
