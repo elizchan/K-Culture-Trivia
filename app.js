@@ -6,7 +6,8 @@
 let runningQuestion = 0
 
 //defined starting score as 0
-let score = 0
+let playerOneScore = 0
+let playerTwoScore = 0
 
 //defined current player
 let currentPlayer = "playerOne"
@@ -831,6 +832,7 @@ const currentPlayerTurn = () => `It's ${currentPlayer}'s turn`
 
 //created a function to display question being asked
 const renderQuestion = () => {
+    Math.floor(Math.random() * questions.length)
     let q = questions[runningQuestion]
     question.innerHTML = q.question
     choiceA.innerHTML = q.a
@@ -858,9 +860,9 @@ function handlePlayerChange() {
 const getAnswer = (event) => {
     if(event === questions[runningQuestion].answer){
         score++
-        //correctAnswer()
-    // }else{
-    //     wrongAnswer()
+        correctAnswer()
+    }else{
+        wrongAnswer()
     }
     i = 0
     if(runningQuestion < questions.length){
@@ -870,17 +872,18 @@ const getAnswer = (event) => {
         clearInterval(timer)
         //scoreTotal()
     }
+    handlePlayerChange()
 }
 
 //function for correctAnswer
-// const correctAnswer = () => {
-//     runningQuestion[question].style.color = "green"
-// }
+const correctAnswer = () => {
+    runningQuestion[question].style.backgroundColor = "green"
+}
 
 //function for wrongAnswer
-// const wrongAnswer = () => {
-//     runningQuestion[question].style.color = "red"
-//}
+const wrongAnswer = () => {
+    runningQuestion[question].style.backgroundColor = "red"
+}
 //event listeners for choices
 choiceA.addEventListener('click', getAnswer)
 choiceB.addEventListener('click', getAnswer)
@@ -903,6 +906,7 @@ const countDown = () => {
         if(runningQuestion < questions.length){
             runningQuestion++
             renderQuestion()
+            handlePlayerChange()
         }else{
             //end the trivia and display score
             clearInterval(timer)
@@ -929,12 +933,10 @@ const winningResult = () => {
 //function to restart game
 const restartGame = () => {
     let runningQuestion = 0
-    let playerOne = []
-    let playerTwo = []
-    let score = 0
+    let playerOneScore = 0
+    let playerTwoScore = 0
     currentPlayer = "playerOne"
     statusDisplay.innerHTML = currentPlayerTurn()
-    //Math.floor(Math.random() * questions.length)
 }
 //button to restart game when it is over
 document.querySelector('.game-reset').addEventListener('click', restartGame)
