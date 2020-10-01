@@ -865,6 +865,7 @@ const countDown = () => {
 }
 
 //console.log(timer)
+
 //-------GAME PLAY----------//
 //function to start game
 const startGameButton = document.querySelector('.game-start')
@@ -931,12 +932,16 @@ const winningResult = () => {
         gameResult.innerHTML = "Game ends in a tie!"
     }
 }
+
 //-----RESTART GAME-------//
 //function to restart game
+//unable to reset runningQuestion to 0
 const restartGame = () => {
-    let runningQuestion = 0
-    let playerOneScore = 0
-    let playerTwoScore = 0
+    console.log(runningQuestion)
+    runningQuestion = 0
+    console.log(runningQuestion)
+    playerOneScore = 0
+    playerTwoScore = 0
     currentPlayer = "playerOne"
     statusDisplay.innerHTML = currentPlayerTurn()
 }
