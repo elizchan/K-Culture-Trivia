@@ -1,16 +1,13 @@
-//defined 2 players
+//defined 2 players and created empty arrays for the correct answers
 let playerOne = []
 let playerTwo = []
 
 //defined starting position of the trivia and will record what question the trivia is on
 let runningQuestion = 0
 
-//function to generate room code
-const getCode = () => {
-    const h2Code = document.querySelector('.code')
-    h2Code.innerHTML = 'Room Code: ' + Math.random().toString(36).substr(2, 5)
-}
-getCode()
+//defined starting score as 0
+let playerOneScore = 0
+let playerTwoScore = 0
 
 //create an array of 100 objects(questions) with answer choices
 const questions = [
@@ -833,7 +830,16 @@ const renderQuestion = () => {
     choiceC.innerHTML = q.c
     choiceD.innerHTML = q.d
 }
-renderQuestion()
+//renderQuestion()
+
+//function to start game
+const startGameButton = document.querySelector('.game-start')
+// const startGame = () => {
+//     renderQuestion()
+//     countDown()
+// }
+startGameButton.addEventListener('click', startGame)
+//-------TIMER------------------------//
 //set time to 20 seconds
 let i = 20
 //function for countdown
@@ -842,21 +848,35 @@ const countDown = () => {
     timeSec.innerHTML = i
     //console.log(i)
     i--
-    if(i < 0){
+    if(i <= 0){
         clearInterval(timer)
     }
     const timerDiv = document.querySelector('.timer')
-    timerDiv.appendChild(timeSec)
+    timerDiv.innerHTML = i
 }
 //function for the countdown to repeat
 const timer = setInterval(countDown, 1000)
 //console.log(timer)
-
+//---------WIN LOGIC---------------//
+//function to display end game results
+const winningResult = () => {
+    let gameResult = document.querySelector('.game-result')
+    if(playerOneScore > playerTwoScore){
+        gameResult.innerHTML = "Player One Wins!"
+    }else if(playerOneScore < playerTwoScore){
+        gameResult.innerHTML = "Player Two Wins!"
+    }else{
+        gameResult.innerHTML = "Game ends in a tie!"
+    }
+}
 //function to restart game
 const restartGame = () => {
-    let position = 0
+    let runningQuestion = 0
     let playerOne = []
     let playerTwo = []
+    let playerOneScore = 0
+    let playerTwoScore = 0
+    Math.floor(Math.random() * questions.length)
 }
 //button to restart game when it is over
 //document.querySelector('.game-reset').addEventListener('click', restartGame)
