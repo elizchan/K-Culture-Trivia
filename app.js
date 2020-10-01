@@ -3,25 +3,7 @@ let playerOne = []
 let playerTwo = []
 
 //defined starting position of the trivia and will record what question the trivia is on
-let position = 0
-
-//set time to 20 seconds
-let i = 20
-//function for countdown
-const countDown = () => {
-    const timeSec = document.createElement('p')
-    timeSec.innerHTML = i
-    //console.log(i)
-    i--
-    if(i < 0){
-        clearInterval(timer)
-    }
-    const timerDiv = document.querySelector('.timer')
-    timerDiv.appendChild(timeSec)
-}
-//function for the countdown to repeat
-const timer = setInterval(countDown, 1000)
-//console.log(timer)
+let runningQuestion = 0
 
 //function to generate room code
 const getCode = () => {
@@ -831,11 +813,44 @@ const questions = [
         c: "picnic",
         d: "drinking alcohol",
         answer: "b"
-    }
-           
+    }      
 ]
 //console.log(questions[39].answer)
 //console.log(questions.length)
+
+//grabbed html elements and gave them variables
+const question = document.getElementById("question")
+const choiceA = document.getElementById("A")
+const choiceB = document.getElementById("B")
+const choiceC = document.getElementById("C")
+const choiceD = document.getElementById("D")
+//created a function to display question being asked
+const renderQuestion = () => {
+    let q = questions[runningQuestion]
+    question.innerHTML = q.question
+    choiceA.innerHTML = q.a
+    choiceB.innerHTML = q.b
+    choiceC.innerHTML = q.c
+    choiceD.innerHTML = q.d
+}
+renderQuestion()
+//set time to 20 seconds
+let i = 20
+//function for countdown
+const countDown = () => {
+    const timeSec = document.createElement('p')
+    timeSec.innerHTML = i
+    //console.log(i)
+    i--
+    if(i < 0){
+        clearInterval(timer)
+    }
+    const timerDiv = document.querySelector('.timer')
+    timerDiv.appendChild(timeSec)
+}
+//function for the countdown to repeat
+const timer = setInterval(countDown, 1000)
+//console.log(timer)
 
 //function to restart game
 const restartGame = () => {

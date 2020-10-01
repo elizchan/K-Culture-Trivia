@@ -1,6 +1,7 @@
 body {
     font-family: 'Indie Flower', cursive;
     background-color: mediumpurple;
+    color: whitesmoke;
 }
 
 section {
@@ -14,7 +15,10 @@ section {
     margin: 50px auto;
     background-color: rgba(0, 0, 0, 0.3);
     display: flex;
-    justify-content: flex-end;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
 }
 
 .game-title {
@@ -25,7 +29,25 @@ section {
     width: 70px;
     border: solid 1px black;
 }
-
+#question {
+    height: 150px;
+    width: 620px;
+    border: solid 1px black;
+    font-size: 34px;
+    align-items: center;
+    text-align: center;
+}
+#A, #B, #C, #D {
+    height: 100px;
+    width: 630px;
+    border: solid 1px black;
+    font-size: 32px;
+    align-items: center;
+    text-align: center;
+}
+.choice:hover {
+    background-color: rgba(0, 0, 0, 0.5)
+}
 .code {
     font-size: 30px;
 }
