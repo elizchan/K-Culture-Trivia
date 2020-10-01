@@ -6,8 +6,10 @@ let playerTwo = []
 let runningQuestion = 0
 
 //defined starting score as 0
-let playerOneScore = 0
-let playerTwoScore = 0
+let score = 0
+
+//defined current player
+let currentPlayer = "playerOne"
 
 //create an array of 100 objects(questions) with answer choices
 const questions = [
@@ -816,11 +818,17 @@ const questions = [
 //console.log(questions.length)
 
 //grabbed html elements and gave them variables
+const gameContainer = document.querySelector('.game-container')
 const question = document.getElementById("question")
 const choiceA = document.getElementById("A")
 const choiceB = document.getElementById("B")
 const choiceC = document.getElementById("C")
 const choiceD = document.getElementById("D")
+const statusDisplay = document.querySelector('.status-display')
+
+//function for current player's turn
+const currentPlayerTurn = () => `It's ${currentPlayer}'s turn`
+
 //created a function to display question being asked
 const renderQuestion = () => {
     let q = questions[runningQuestion]
@@ -834,14 +842,26 @@ const renderQuestion = () => {
 
 //function to start game
 const startGameButton = document.querySelector('.game-start')
-// const startGame = () => {
-//     renderQuestion()
-//     countDown()
-// }
+const startGame = () => {
+    renderQuestion()
+    countDown()
+    statusDisplay.innerHTML = currentPlayerTurn()
+}
 startGameButton.addEventListener('click', startGame)
+//function to switch players
+function handlePlayerChange() {
+    currentPlayer = currentPlayer === "playerOne" ? "playerTwo" : "playerOne"
+    statusDisplay.innerHTML = currentPlayerTurn()
+}
+//gameplay function
+const getAnswer = (event) => {
+    if(event === questions[runningQuestion].answer){
+        score++
+    }
+}
 //-------TIMER------------------------//
-//set time to 20 seconds
-let i = 20
+//set time to 15 seconds
+let i = 15
 //function for countdown
 const countDown = () => {
     const timeSec = document.createElement('p')
@@ -874,9 +894,9 @@ const restartGame = () => {
     let runningQuestion = 0
     let playerOne = []
     let playerTwo = []
-    let playerOneScore = 0
-    let playerTwoScore = 0
+    let score = 0
+    let currentPlayer = "playerOne"
     Math.floor(Math.random() * questions.length)
 }
 //button to restart game when it is over
-//document.querySelector('.game-reset').addEventListener('click', restartGame)
+document.querySelector('.game-reset').addEventListener('click', restartGame)
