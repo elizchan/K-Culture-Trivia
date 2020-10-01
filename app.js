@@ -1,6 +1,6 @@
 //defined 2 players and created empty arrays for the correct answers
-let playerOne = []
-let playerTwo = []
+//let playerOne = []
+//let playerTwo = []
 
 //defined starting position of the trivia and will record what question the trivia is on
 let runningQuestion = 0
@@ -845,6 +845,7 @@ const startGameButton = document.querySelector('.game-start')
 const startGame = () => {
     renderQuestion()
     countDown()
+    let timer = setInterval(countDown, 1000)
     statusDisplay.innerHTML = currentPlayerTurn()
 }
 startGameButton.addEventListener('click', startGame)
@@ -857,26 +858,61 @@ function handlePlayerChange() {
 const getAnswer = (event) => {
     if(event === questions[runningQuestion].answer){
         score++
+        //correctAnswer()
+    // }else{
+    //     wrongAnswer()
     }
-}
-//-------TIMER------------------------//
-//set time to 15 seconds
-let i = 15
-//function for countdown
-const countDown = () => {
-    const timeSec = document.createElement('p')
-    timeSec.innerHTML = i
-    //console.log(i)
-    i--
-    if(i <= 0){
+    i = 0
+    if(runningQuestion < questions.length){
+        runningQuestion++
+        renderQuestion()
+    }else{
         clearInterval(timer)
+        //scoreTotal()
     }
-    const timerDiv = document.querySelector('.timer')
-    timerDiv.innerHTML = i
 }
-//function for the countdown to repeat
-const timer = setInterval(countDown, 1000)
+
+//function for correctAnswer
+// const correctAnswer = () => {
+//     runningQuestion[question].style.color = "green"
+// }
+
+//function for wrongAnswer
+// const wrongAnswer = () => {
+//     runningQuestion[question].style.color = "red"
+//}
+//event listeners for choices
+choiceA.addEventListener('click', getAnswer)
+choiceB.addEventListener('click', getAnswer)
+choiceC.addEventListener('click', getAnswer)
+choiceD.addEventListener('click', getAnswer)
+
+//-------TIMER------------------------//
+//set time for question to be answered to 15 seconds
+let i = 15
+//function for how the countdown works with the rendered question
+const countDown = () => {
+    //console.log(i)
+    if(i >= 0){
+        const timerDiv = document.querySelector('.timer')
+        timerDiv.innerHTML = i
+        i--
+    }else{
+        i = 0
+        //wrongAnswer()
+        if(runningQuestion < questions.length){
+            runningQuestion++
+            renderQuestion()
+        }else{
+            //end the trivia and display score
+            clearInterval(timer)
+            //scoreTotal()
+        }
+    }
+}
+
 //console.log(timer)
+
 //---------WIN LOGIC---------------//
 //function to display end game results
 const winningResult = () => {
@@ -889,14 +925,16 @@ const winningResult = () => {
         gameResult.innerHTML = "Game ends in a tie!"
     }
 }
+//-----RESTART GAME-------//
 //function to restart game
 const restartGame = () => {
     let runningQuestion = 0
     let playerOne = []
     let playerTwo = []
     let score = 0
-    let currentPlayer = "playerOne"
-    Math.floor(Math.random() * questions.length)
+    currentPlayer = "playerOne"
+    statusDisplay.innerHTML = currentPlayerTurn()
+    //Math.floor(Math.random() * questions.length)
 }
 //button to restart game when it is over
 document.querySelector('.game-reset').addEventListener('click', restartGame)
