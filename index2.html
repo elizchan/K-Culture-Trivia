@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <title>K-Culture Trivia</title>
+</head>
+<body>
+    <section>
+        <h1 class="game-title">K-Culture Trivia!</h1>
+        <!-- <div class="container">
+           <div id="question"></div>
+           <div class="timer"></div>
+           <input type="radio" class="choice" id="A" value="A">
+           <label for="A"></label><br>
+           <input type="radio" class="choice" id="B" value="B">
+           <label for="B"></label><br>
+           <input type="radio" class="choice" id="C" value="C">
+           <label for="C"></label><br>
+           <input type="radio" class="choice" id="D" value="D">
+           <label for="D"></label><br>
+        </div> -->
+        <div id="container">
+            <div class="question">What year was BTS found?</div>
+            <div class="timer"></div>
+            <button class="choice" id="A" onclick="wrongAnswer()">2018</button>
+            <button class="choice" id="B" onclick="correctAnswer()">2013</button>
+            <button class="choice" id="C" onclick="wrongAnswer()">2016</button>
+            <button class="choice" id="D" onclick="wrongAnswer()">2017</button>
+        </div>
+        <h2 class="status-display"></h2>
+        <button class="game-start">Start Game!</button>
+        <h2 class="game-result"></h2>
+        <button class="game-reset">Start Over</button>
+    </section>
+    <script src="app2.js"></script>
+</body>
+</html>

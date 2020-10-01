@@ -6,20 +6,23 @@ body {
 
 section {
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.game-container {
+/* .container {
     height: 600px;
     width: 700px;
     border: solid 1px black;
     margin: 50px auto;
     background-color: rgba(0, 0, 0, 0.3);
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    justify-items: space-between;
+    align-items: right;
     cursor: pointer;
-}
+} */
 
 .game-title {
     font-size: 48px;
@@ -30,8 +33,7 @@ section {
     width: 70px;
     border: solid 1px black;
 }
-
-#question {
+.question {
     height: 150px;
     width: 620px;
     border: solid 1px black;
@@ -40,22 +42,6 @@ section {
     text-align: center;
 }
 
-#A, #B, #C, #D {
-    height: 100px;
-    width: 630px;
-    border: solid 1px black;
-    font-size: 32px;
-    align-items: center;
-    text-align: center;
-}
-
 .choice:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.game-result {
-    height: 100px;
-    width: 250px;
-    border: 1px solid black;
-    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5)
 }

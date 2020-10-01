@@ -1,7 +1,3 @@
-//defined 2 players and created empty arrays for the correct answers
-//let playerOne = []
-//let playerTwo = []
-
 //defined starting position of the trivia and will record what question the trivia is on
 let runningQuestion = 0
 
@@ -842,6 +838,34 @@ const renderQuestion = () => {
 }
 //renderQuestion()
 
+//-------TIMER------------------------//
+//set time for question to be answered to 15 seconds
+let i = 10
+//function for how the countdown works with the rendered question
+const countDown = () => {
+    //console.log(i)
+    if(i >= 0){
+        const timerDiv = document.querySelector('.timer')
+        timerDiv.innerHTML = i
+        i--
+    }else{
+        //wrongAnswer()
+        //if current question is less than length of questions array, move to next question, switch players and reset timer to 10 seconds
+        if(runningQuestion < questions.length){
+            runningQuestion++
+            renderQuestion()
+            handlePlayerChange()
+            return i=10
+        }else{
+            //end the trivia and display score
+            clearInterval(timer)
+            winningResult()
+        }
+    }
+}
+
+//console.log(timer)
+//-------GAME PLAY----------//
 //function to start game
 const startGameButton = document.querySelector('.game-start')
 const startGame = () => {
@@ -851,71 +875,49 @@ const startGame = () => {
     statusDisplay.innerHTML = currentPlayerTurn()
 }
 startGameButton.addEventListener('click', startGame)
+//let timer = setInterval(countDown, 1000)
 //function to switch players
 function handlePlayerChange() {
-    currentPlayer = currentPlayer === "playerOne" ? "playerTwo" : "playerOne"
+    currentPlayer = currentPlayer === "playerOne" ? "playerTwo" : "playerOne";
     statusDisplay.innerHTML = currentPlayerTurn()
 }
 //gameplay function
-const getAnswer = (event) => {
-    if(event === questions[runningQuestion].answer){
+const getAnswer = (userClick) => {
+    //if user clicks is equal to the runningQuestion's answer then increase player's score and switch player
+    if(userClick === questions[runningQuestion].answer){
         score++
-        correctAnswer()
+        handlePlayerChange()
+        //correctAnswer()
     }else{
-        wrongAnswer()
+        //wrongAnswer()
     }
-    i = 0
+    //if runningQuestion is less than length of questions array then move onto next question, switch players and set countdown timer to 10 seconds again
     if(runningQuestion < questions.length){
         runningQuestion++
         renderQuestion()
+        handlePlayerChange()
+        //question.style.backgroundColor = ""
+        return i=10
     }else{
         clearInterval(timer)
-        //scoreTotal()
+        winningResult()
     }
-    handlePlayerChange()
 }
 
-//function for correctAnswer
-const correctAnswer = () => {
-    runningQuestion[question].style.backgroundColor = "green"
-}
+// //function for correctAnswer
+// const correctAnswer = () => {
+//     question.style.backgroundColor = "green"
+// }
 
-//function for wrongAnswer
-const wrongAnswer = () => {
-    runningQuestion[question].style.backgroundColor = "red"
-}
+// //function for wrongAnswer
+// const wrongAnswer = () => {
+//     question.style.backgroundColor = "red"
+// }
 //event listeners for choices
 choiceA.addEventListener('click', getAnswer)
 choiceB.addEventListener('click', getAnswer)
 choiceC.addEventListener('click', getAnswer)
 choiceD.addEventListener('click', getAnswer)
-
-//-------TIMER------------------------//
-//set time for question to be answered to 15 seconds
-let i = 15
-//function for how the countdown works with the rendered question
-const countDown = () => {
-    //console.log(i)
-    if(i >= 0){
-        const timerDiv = document.querySelector('.timer')
-        timerDiv.innerHTML = i
-        i--
-    }else{
-        i = 0
-        //wrongAnswer()
-        if(runningQuestion < questions.length){
-            runningQuestion++
-            renderQuestion()
-            handlePlayerChange()
-        }else{
-            //end the trivia and display score
-            clearInterval(timer)
-            //scoreTotal()
-        }
-    }
-}
-
-//console.log(timer)
 
 //---------WIN LOGIC---------------//
 //function to display end game results
