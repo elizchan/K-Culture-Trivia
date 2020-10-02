@@ -935,7 +935,8 @@ choiceD.addEventListener('click', getAnswer)
 //---------WIN LOGIC---------------//
 //function to display end game results
 const winningResult = () => {
-    let gameResult = document.querySelector('.result')
+    let gameResult = document.getElementById('game-result')
+    gameResult.style.display = 'block'
     if(playerOneScore > playerTwoScore){
         gameResult.innerHTML = "Player One Wins!"
     }else if(playerOneScore < playerTwoScore){

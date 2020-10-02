@@ -13,3 +13,12 @@ Approach Taken to Create the Game
 -I created a renderQuestion function to display the question from the array and the answer choices that come with the question
 -I created a currentPlayerTurn function using template literals that was shown in the tic tac toe code-along with a handlePlayerChange function
 -I set up a timer function for the countdown to work. I set the innerHTML of the div to i which is the variable for seconds. If i is less than 10 seconds, i decreases by 1 every second and prints time into div
+-Once timer reaches 0, if the runningQuestion is less than the questions array then the next questions should populate with renderQuestion and reset time to 10 seconds and switch players
+-I created a start function so that when the start button is clicked the renderQuestion, countDown and currentPlayer's turn would be displayed
+-The following function would be the event function. If the userclick's answer is equal to the runningQuestion's answer then the current player score increases by one and switches to next player. If the runningQuestion is less than the length of questions array then the next question should load, switch players and reset timer to 10 seconds. The function should keep going until it reaches the end of the array in which the winningResult function and clearInterval should be called
+-The last function to be written is the reset function that is tied to the start over button.The variables stated in the beginning of the game are set back to default values.
+
+
+Unsolved Problems
+-I am unable to get the score to print into the div
+-The reset function/button is only able to reset the trivia to question 2 instead of question 1
