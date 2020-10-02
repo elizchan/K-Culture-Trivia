@@ -883,6 +883,7 @@ function handlePlayerChange() {
     currentPlayer = currentPlayer === "playerOne" ? "playerTwo" : "playerOne";
     statusDisplay.innerHTML = currentPlayerTurn()
 }
+
 //gameplay function
 const getAnswer = (userClick) => {
     //if user clicks is equal to the runningQuestion's answer then increase player's score and switch player
@@ -898,9 +899,9 @@ const getAnswer = (userClick) => {
         handlePlayerChange()
         console.log(playerOneScore)
         console.log(playerTwoScore)
-        //correctAnswer()
+        //change div clicked innerHTML to green
     }else{
-        //wrongAnswer()
+        //change div clicked innerHTML to red
     }
     
     //if runningQuestion is less than length of questions array then move onto next question, switch players and set countdown timer to 10 seconds again
@@ -908,23 +909,12 @@ const getAnswer = (userClick) => {
         runningQuestion++
         renderQuestion()
         handlePlayerChange()
-        //question.style.backgroundColor = ""
         return i=10
     }else{
         clearInterval(timer)
         winningResult()
     }
 }
-
-// //function for correctAnswer
-// const correctAnswer = () => {
-//     question.style.backgroundColor = "green"
-// }
-
-// //function for wrongAnswer
-// const wrongAnswer = () => {
-//     question.style.backgroundColor = "red"
-// }
 
 //event listeners for choices
 choiceA.addEventListener('click', getAnswer)

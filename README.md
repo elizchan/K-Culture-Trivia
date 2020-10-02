@@ -1,13 +1,13 @@
 # K-Culture-Trivia
 --code is in index.html, style.css and app.js
-Intro to Trivia Setup
+Intro to Trivia Setup:
 -There are 2 players and 100 questions about Korean culture
 -Players alternate with each turn
 -Each question lasts 15 seconds
 -If the answer clicked is correct, the div would turn green, otherwise it would turn red 
 -The score would be tallied at the end, whoever answers the most questions correctly wins the game
 
-Approach Taken to Create the Game
+Approach Taken to Create the Game:
 -I thought of 100 different questions about K-Pop, K-dramas, K-food and K-Geography
 -I created a div container to put the questions and answer choices in and made individual divs for the question and answer choices
 -I declared javascript variables for html elements that are used within the javascript
@@ -20,6 +20,6 @@ Approach Taken to Create the Game
 -The last function to be written is the reset function that is tied to the start over button.The variables stated in the beginning of the game are set back to default values.
 
 
-Unsolved Problems
+Unsolved Problems:
 -I am unable to get the score to print into the div
 -The reset function/button is only able to reset the trivia to question 2 instead of question 1
