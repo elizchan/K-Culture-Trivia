@@ -1,4 +1,5 @@
 # K-Culture-Trivia
+--code is in index.html, style.css and app.js
 Intro to Trivia Setup
 -There are 2 players and 100 questions about Korean culture
 -Players alternate with each turn
