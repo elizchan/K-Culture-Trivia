@@ -833,7 +833,6 @@ const currentPlayerTurn = () => `It's ${currentPlayer}'s turn`
 
 //created a function to display question being asked
 const renderQuestion = () => {
-    //Math.floor(Math.random() * questions.length)
     let q = questions[runningQuestion]
     question.innerHTML = q.question
     choiceA.innerHTML = q.a
@@ -844,7 +843,7 @@ const renderQuestion = () => {
 //renderQuestion()
 
 //-------TIMER------------------------//
-//set time for question to be answered to 15 seconds
+//set time for question to be answered to 10 seconds
 let i = 10
 //function for how the countdown works with the rendered question
 const countDown = () => {
