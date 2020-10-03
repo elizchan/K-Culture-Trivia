@@ -35,6 +35,7 @@ A 100 question trivia about anything Korean culture(music, drama/movie, food and
 * The third step was to start the javascript coding: first by setting up global variables and making an array of 100 objects for the question and answer choices with the correct answer
 * The fourth step was to create a function for the questions to show in the divs, a countdown timer that automatically resets with each turn, restart game function, handle player change, keeping scores and the gameplay function
 * The last step was to create a winning game logic function
+* all the code is found in index.html, app.js and style.css
 
 ### Unsolved Problems:
 * removing previous player winner from game-result div
