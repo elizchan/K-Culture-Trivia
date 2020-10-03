@@ -874,9 +874,9 @@ const countDown = () => {
 //function to start game
 const startGameButton = document.querySelector('.game-start')
 const startGame = () => {
-    console.log(runningQuestion)
+    //console.log(runningQuestion)
     runningQuestion = 0
-    console.log(runningQuestion)
+    //console.log(runningQuestion)
     playerOneScore = 0
     playerTwoScore = 0
     currentPlayer = "playerOne"
@@ -951,14 +951,14 @@ const winningResult = () => {
 //-----RESTART GAME-------//
 //function to restart game
 //unable to restart game to question 1
-const restartGame = () => {
-    console.log(runningQuestion)
-    runningQuestion = -1
-    console.log(runningQuestion)
-    playerOneScore = 0
-    playerTwoScore = 0
-    currentPlayer = "playerOne"
-    statusDisplay.innerHTML = currentPlayerTurn()
-}
+// const restartGame = () => {
+//     console.log(runningQuestion)
+//     runningQuestion = -1
+//     console.log(runningQuestion)
+//     playerOneScore = 0
+//     playerTwoScore = 0
+//     currentPlayer = "playerOne"
+//     statusDisplay.innerHTML = currentPlayerTurn()
+// }
 //button to restart game when it is over
 document.querySelector('.game-reset').addEventListener('click', startGame)
