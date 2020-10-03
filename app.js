@@ -825,6 +825,8 @@ const choiceB = document.getElementById("B")
 const choiceC = document.getElementById("C")
 const choiceD = document.getElementById("D")
 const statusDisplay = document.querySelector('.status-display')
+const pOneScoreDisplay = document.getElementById('p1-score')
+const pTwoScoreDisplay = document.getElementById('p2-score')
 
 //function for current player's turn
 const currentPlayerTurn = () => `It's ${currentPlayer}'s turn`
@@ -902,9 +904,13 @@ const getAnswer = (userClick) => {
     if(userClick.target.id === questions[runningQuestion].answer.toUpperCase()){
         if(currentPlayer === "playerOne"){
             playerOneScore++
+            pOneScoreDisplay.innerHTML = "Player One Score: " + playerOneScore
+            pTwoScoreDisplay.innerHTML = "Player Two Score: " + playerTwoScore
             handlePlayerChange()
         }else{
             playerTwoScore++
+            pTwoScoreDisplay.innerHTML = "Player Two Score: " + playerTwoScore
+            pOneScoreDisplay.innerHTML = "Player One Score: " + playerOneScore
             handlePlayerChange()
         }
         handlePlayerChange()

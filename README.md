@@ -1,5 +1,4 @@
 # K-Culture-Trivia
---code is in index.html, style.css and app.js
 Intro to Trivia Setup:
 -There are 2 players and 100 questions about Korean culture
 -Players alternate with each turn
@@ -23,7 +22,7 @@ Approach Taken to Create the Game:
 Unsolved Problems:
 -removing previous player winner from game-result div
 
-Things To Improve On:
+Things To Improve On/Add to the game in the future:
 -allowing the userClick event to display red or green if answer wrong/correct
 -display player scores with each turn
 -random question generator
