@@ -24,5 +24,5 @@ Unsolved Problems:
 
 Things To Improve On/Add to the game in the future:
 -allowing the userClick event to display red or green if answer wrong/correct
--display player scores with each turn
 -random question generator
+-moving game-result div to the center of the page

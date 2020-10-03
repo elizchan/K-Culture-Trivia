@@ -55,8 +55,8 @@ section {
 }
 
 #game-result {
-    height: 200px;
-    width: 700px;
+    height: 175px;
+    width: 300px;
     border: 1px solid black;
     text-align: center;
     font-size: 20px;
