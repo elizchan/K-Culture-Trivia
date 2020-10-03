@@ -874,8 +874,16 @@ const countDown = () => {
 //function to start game
 const startGameButton = document.querySelector('.game-start')
 const startGame = () => {
+    console.log(runningQuestion)
+    runningQuestion = 0
+    console.log(runningQuestion)
+    playerOneScore = 0
+    playerTwoScore = 0
+    currentPlayer = "playerOne"
+    //statusDisplay.innerHTML = currentPlayerTurn()
     renderQuestion()
     countDown()
+    clearInterval(timer)
     timer = setInterval(countDown, 1000)
     statusDisplay.innerHTML = currentPlayerTurn()
 }
@@ -900,13 +908,12 @@ const getAnswer = (userClick) => {
             handlePlayerChange()
         }
         handlePlayerChange()
-        console.log(playerOneScore)
-        console.log(playerTwoScore)
+        //console.log(playerOneScore)
+        //console.log(playerTwoScore)
         //change div clicked innerHTML to green
     }else{
         //change div clicked innerHTML to red
     }
-    
     //if runningQuestion is less than length of questions array then move onto next question, switch players and set countdown timer to 10 seconds again
     if(runningQuestion < questions.length){
         runningQuestion++
@@ -943,10 +950,10 @@ const winningResult = () => {
 
 //-----RESTART GAME-------//
 //function to restart game
-//unable to reset runningQuestion to 0, however game resets to question 2 at the completion of the trivia
+//unable to restart game to question 1
 const restartGame = () => {
     console.log(runningQuestion)
-    runningQuestion = 0
+    runningQuestion = -1
     console.log(runningQuestion)
     playerOneScore = 0
     playerTwoScore = 0
@@ -954,4 +961,4 @@ const restartGame = () => {
     statusDisplay.innerHTML = currentPlayerTurn()
 }
 //button to restart game when it is over
-document.querySelector('.game-reset').addEventListener('click', restartGame)
+document.querySelector('.game-reset').addEventListener('click', startGame)
