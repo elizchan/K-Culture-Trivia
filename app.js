@@ -8,6 +8,9 @@ let playerTwoScore = 0
 //defined current player
 let currentPlayer = "playerOne"
 
+//global timer function
+let timer
+
 //create an array of 100 objects(questions) with answer choices
 const questions = [
     {
@@ -859,8 +862,8 @@ const countDown = () => {
             return i=10
         }else{
             //end the trivia and display score
-            clearInterval(timer)
             winningResult()
+            clearInterval(timer)
         }
     }
 }
@@ -873,7 +876,7 @@ const startGameButton = document.querySelector('.game-start')
 const startGame = () => {
     renderQuestion()
     countDown()
-    let timer = setInterval(countDown, 1000)
+    timer = setInterval(countDown, 1000)
     statusDisplay.innerHTML = currentPlayerTurn()
 }
 startGameButton.addEventListener('click', startGame)
@@ -911,8 +914,8 @@ const getAnswer = (userClick) => {
         handlePlayerChange()
         return i=10
     }else{
-        clearInterval(timer)
         winningResult()
+        clearInterval(timer)
     }
 }
 
@@ -926,14 +929,16 @@ choiceD.addEventListener('click', getAnswer)
 //function to display end game results
 const winningResult = () => {
     let gameResult = document.getElementById('game-result')
-    gameResult.style.display = 'block'
-    if(playerOneScore > playerTwoScore){
+    //gameResult.style.display = 'block'
+    if(playerOneScore >= playerTwoScore){
         gameResult.innerHTML = "Player One Wins!"
-    }else if(playerOneScore < playerTwoScore){
+    }else if(playerOneScore <= playerTwoScore){
         gameResult.innerHTML = "Player Two Wins!"
     }else{
         gameResult.innerHTML = "Game ends in a tie!"
     }
+    console.log(gameResult)
+    //gameResult.innerHTML = "Player One Wins!"
 }
 
 //-----RESTART GAME-------//
