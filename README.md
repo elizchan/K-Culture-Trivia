@@ -21,5 +21,9 @@ Approach Taken to Create the Game:
 
 
 Unsolved Problems:
--I am unable to get the score to print into the div
--The reset function/button is only able to reset the trivia to question 2 instead of question 1
+-removing previous player winner from game-result div
+
+Things To Improve On:
+-allowing the userClick event to display red or green if answer wrong/correct
+-display player scores with each turn
+-random question generator
