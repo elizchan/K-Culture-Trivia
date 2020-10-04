@@ -17,6 +17,7 @@ A 100 question trivia about anything Korean culture(music, drama/movie, food and
 ## Approach:
 
 #### Overview
+
 #### Wireframe
 <img src="https://i.ibb.co/n8Z38qX/20201003-102137.jpg" alt="20201003-102137" border="0">
 

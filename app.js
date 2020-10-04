@@ -897,10 +897,10 @@ function handlePlayerChange() {
 }
 
 //gameplay function
-const getAnswer = (userClick) => {
+const getAnswer = (event) => {
     //if user clicks is equal to the runningQuestion's answer then increase player's score and switch player
     //debugger
-    if(userClick.target.id === questions[runningQuestion].answer.toUpperCase()){
+    if(event.target.id === questions[runningQuestion].answer.toUpperCase()){
         if(currentPlayer === "playerOne"){
             playerOneScore++
             pOneScoreDisplay.innerHTML = "Player One Score: " + playerOneScore
@@ -915,14 +915,24 @@ const getAnswer = (userClick) => {
         handlePlayerChange()
         //console.log(playerOneScore)
         //console.log(playerTwoScore)
+        correctAnswer()
         //change div clicked innerHTML to green
+        //correctAnswer(event)
     }else{
+        wrongAnswer()
         //change div clicked innerHTML to red
+        //wrongAnswer(event)
     }
     //if runningQuestion is less than length of questions array then move onto next question, switch players and set countdown timer to 10 seconds again
     if(runningQuestion < questions.length){
         runningQuestion++
         renderQuestion()
+        //const choices = document.querySelectorAll('.choice')
+        //console.log(choices)
+        // choices.forEach(choice => {
+        //     choice.style.backgroundColor = "rgba(0, 0, 0, 0.3)"
+        // })
+        //choice.style.op
         handlePlayerChange()
         return i=10
     }else{
@@ -930,9 +940,23 @@ const getAnswer = (userClick) => {
         clearInterval(timer)
     }
 }
+// //function for correctAnswer
+const correctAnswer = () => {
+    question.style.backgroundColor = "green"
+}
 
+//function for wrongAnswer
+const wrongAnswer = () => {
+    question.style.backgroundColor = "red"
+}
+// const wrongAnswer = (event) => {
+//     event.target.style.backgroundColor = "red"
+// }
 //event listeners for choices
 choiceA.addEventListener('click', getAnswer)
+// choiceA.addEventListener('click', (event)=>{
+//     getAnswer(event)
+// })
 choiceB.addEventListener('click', getAnswer)
 choiceC.addEventListener('click', getAnswer)
 choiceD.addEventListener('click', getAnswer)
